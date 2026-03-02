@@ -2,7 +2,7 @@
 class Solution {
     public int findCeil(int[] arr, int x) {
         // code here
-        int n = arr.length; 
+        int n = arr.length;
         int low = 0, high = n - 1;
         int ans = -1;
         
