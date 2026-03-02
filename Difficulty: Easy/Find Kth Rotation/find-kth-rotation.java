@@ -1,19 +1,20 @@
 class Solution {
     public int findKRotation(int arr[]) {
         // Code here
+        //Method 1: find minvalue and return its index...
         int n = arr.length;
-        int low = 0, high = n - 1;
+        int minVal = arr[0];
+        int minIdx = 0;
         
-        while(low < high) {
-            int mid = low + (high - low) / 2;
-            
-            if(arr[mid] > arr[high]) {
-                low = mid + 1;
-            } else {
-                high = mid;
+        for(int i = 1; i < n; i++) {
+            if(minVal > arr[i]) {
+                minVal = arr[i];
+                minIdx = i;
             }
         }
         
-        return low;
+        return minIdx;
+        
+        // Method
     }
 }
